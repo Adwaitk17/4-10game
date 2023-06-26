@@ -5,7 +5,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Math Arrangement Game</h1>
+  <header>
+    <img src="title.png" alt="Header image">
+  </header>
 
   <div class="game-container">
     <div class="digits-container">
@@ -18,8 +20,8 @@
     <div class="operators-container">
       <div class="operator">+</div>
       <div class="operator">-</div>
-      <div class="operator">x</div>
-      <div class="operator">÷</div>
+      <div class="operator">*</div>
+      <div class="operator">/</div>
     </div>
 
     <div id="arrangement"></div>
@@ -27,8 +29,15 @@
     <button id="check-button">Check</button>
 
     <div id="result"></div>
-    <button id="next-level-button" class="btn">Next Level</button>
+    <div id="score">Score: 0</div>
+    <!--<button id="next-level-button" class="btn">Next Level</button>-->
   </div>
+  <!--<div class="gameover">
+    <h2 id="c1">Game over!!!!</h2>
+    <h3 id="gameover-score"></h3>
+    <button class="menu"><a href="menu.html">Play again</a></button>
+    <button class="exit">Exit</button>
+</div>-->
 
   <script src="script.js"></script>
 </body>
