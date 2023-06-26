@@ -1,6 +1,7 @@
 // Define the target answer for the game
-const targetAnswer = 10;
-
+var gameover = document.getElementsByClassName('gameover');
+var gameoverScore = document.getElementById('gameover-score');const targetAnswer = 10;
+let score =0;
 // Generate random game elements
 function generateGameElements() {
   const digits = [];
@@ -19,7 +20,7 @@ function generateGameElements() {
 
 // Get a random operator
 function getRandomOperator( i) {
-  const operators = ['+', '-', 'x', '/'];
+  const operators = ['+', '-', '*', '/'];
   //const randomIndex = Math.floor(Math.random() * operators.length);
   return operators[i];
 }
@@ -68,8 +69,12 @@ function handleCorrectAnswer() {
 
   if (isCorrect(arrangement, targetAnswer)) {
     resultElement.innerText = 'Congratulations! Your answer is correct!';
+    score ++;
+    updateScore();
+    
   } else {
-    resultElement.innerText = 'Sorry, your answer is incorrect. Please try again.';
+    //resultElement.innerText = 'Sorry, your answer is incorrect. Please try again.';//
+    window.location.href = "gameov.html";
   }
 
   setTimeout(() => {
@@ -77,6 +82,13 @@ function handleCorrectAnswer() {
     generateNewGame();
   }, 2000);
 }
+
+
+function updateScore() {
+  // Display the score in the HTML element with id "score"
+  document.getElementById("score").textContent = `Score: ${score}`;
+}
+
 
 // Generate new game elements and reset the game
 function generateNewGame() {
@@ -120,7 +132,8 @@ window.addEventListener('DOMContentLoaded', () => {
       setResult('Congratulations! Your arrangement is correct!');
       handleCorrectAnswer();
     } else {
-      setResult('Sorry, your arrangement is incorrect. Please try again.');
+      //setResult('Sorry, your arrangement is incorrect. Please try again.');//
+      window.location.href = "gameov.html";
     }
   });
 
