@@ -8,7 +8,7 @@
   <header>
     <img src="title.png" alt="Header image">
   </header>
-
+<div class ="app">
   <div class="game-container">
     <div class="digits-container">
       <div class="digit">1</div>
@@ -25,6 +25,9 @@
     </div>
 
     <div id="arrangement"></div>
+    <div id="level"></div>
+
+    
 
     <button id="check-button">Check</button>
 
@@ -38,6 +41,20 @@
     <button class="menu"><a href="menu.html">Play again</a></button>
     <button class="exit">Exit</button>
 </div>-->
+</div>
+<div id="game-over-popup" style="display: none;">
+  <h2>Game Over</h2>
+  <p id="score-display">Your Score: <span id="current-score"></span></p>
+</div>
+
+<!--<button onclick="showGameOverPage()">Show Game Over</button>-->
+<!--<div class="gameover">
+  <h2 id="c1">Game over!!!!</h2>
+  <h3 id="gameover-score"></h3>
+  <button class="menu"><a href="menu.html">Play again</a></button>
+  <button class="exit">Exit</button>
+</div>-->
+
 
   <script src="script.js"></script>
 </body>
