@@ -1,4 +1,15 @@
 body {
     background-image: url("bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     text-align: center;
+}
+#start-button
+{
+    background-color:D9D9D9;
+    
+    
+
+    
 }
